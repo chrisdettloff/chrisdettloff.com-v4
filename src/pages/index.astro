@@ -15,17 +15,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<main>
 			<h4>Professional Summary</h4>
       <p>
-        Cloud Engineer with a strong focous on the AWS and GCP cloud platforms. I specialize in
-        architecting and managing cloud infrastructure. My expertice lies in infrastructure as code
-        and CI/CD pipelines.
+        I am a cloud engineer with a strong focus on the AWS and GCP cloud platforms. 
+        I specialize in architecting and managing cloud infrastructure for distributed systems. 
+        My expertice lies in infrastructure as code and CI/CD pipelines.
       </p>
-      <h4>Stuff I know</h4>
+      <h4>What I know well</h4>
       <ul>
         <li>
           Cloud Platforms: AWS, GCP
         </li>
         <li>
-          Infrastructure as Code: Terraform, CDK, Cloudformation, Deployment Manager
+          Infrastructure as Code: Terraform, AWS CDK
         </li>
         <li>
           Scripting: Python, Bash, Powershell
@@ -34,21 +34,44 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           CI/CD: Jenkins, Github Actions
         </li>
         <li>
-          Monitoring/Logging: New Relic, Datadog, Dynatrace, Splunk, Cloudwatch
+          Linux Administration: Redhat, SUSE, Ubuntu Server
+        </li>
+        <li>
+          Containerization: Docker, Kubernetes, AWS ECS, GCP GKE
+        </li>
+        <li>
+          Networking: DNS, VPC, Load Balancing, Firewall
+        </li>
+        <li>
+          Monitoring/Logging: New Relic, Datadog, Cloudwatch, Cloud Logging
         </li>
       </ul>
       <h4>
         Certifications
       </h4>
-      <ul>
-        <li>
-          GCP Cloud Architect - Professional
-        </li>
-        <li>
-          AWS Certified Developer - Associate
-        </li>
-      </ul>
+      <a href="https://google.accredible.com/c13bbbe2-d2b5-4564-a84f-1dba8b634b57" target="_blank">
+        <img src="./gcp-badge.png" alt="GCP Cloud Architect - Professional" />
+      </a>
+      <a href="https://www.credly.com/badges/ea0a5ba8-99bb-4e01-b7c1-aa688f247390/public_url" target="_blank">
+        <img src="./aws-certified-developer-associate.png" alt="AWS Certified Developer - Associate" />
+      </a>
+      <br />
+      <br />
+      <h4>Fun Fact</h4>
+        <p>
+          I enjoy chess and the piano.
+        </p>
 		</main>
 		<Footer />
 	</body>
 </html>
+<style>
+  img {
+    width: 150px;
+    transition: transform 0.2s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+</style>
