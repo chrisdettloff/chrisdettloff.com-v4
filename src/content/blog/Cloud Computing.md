@@ -1,5 +1,5 @@
 ---
-title: 'Cloud Computing for a newbie'
+title: 'Cloud Computing for a Newbie'
 description: 'Cloud computing for beginners'
 pubDate: 'Nov 8 2023'
 ---
