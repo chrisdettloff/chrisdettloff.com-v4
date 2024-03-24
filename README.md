@@ -7,6 +7,7 @@
 
 #### CI/CD
 
-**[Vercel](https://vercel.com)
+**[Vercel](https://vercel.com)**
+
 
 Place images linked in markdown in ```public``` folder.
