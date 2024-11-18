@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import ThemeToggle from './ThemeToggle.astro';
 ---
 
 <header>
@@ -11,8 +12,9 @@ import { SITE_TITLE } from '../consts';
 			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
 		</div>
 		<div class="social-links">
+            <ThemeToggle />
 			<a href="https://linkedin.com/in/christopherdettloff" target="_blank">
-				<span class="sr-only">Follow Astro on Mastodon</span>
+				<span class="sr-only">Connect with Chris Dettloff on Linkedin</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
@@ -45,8 +47,9 @@ import { SITE_TITLE } from '../consts';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
+		background: var(--bg-color);
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        transition: backgroud-color 0.3s ease, color 0.3s ease;
 	}
 	h2 {
 		margin: 0;
@@ -56,15 +59,17 @@ import { SITE_TITLE } from '../consts';
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+        color: var(--text-color);
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+        color: var(--text-color);
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: var(--text-color);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
@@ -75,7 +80,12 @@ import { SITE_TITLE } from '../consts';
 	.social-links,
 	.social-links a {
 		display: flex;
+        color: var(--text-color);
 	}
+    .internal-links {
+        display: flex;
+        color: var(--text-color)
+    }
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
