@@ -46,6 +46,32 @@ const posts = (await getCollection('blog')).sort(
       color: rgb(var(--gray));
       font-size: 0.9rem;
     }
+    .rss-section {
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .rss-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--accent);
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .rss-link:hover {
+        background: var(--accent);
+        color: var(--accent-dark);
+    }
+
+    .rss-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: currentColor;
+    }
 		</style>
 	</head>
 	<body>
@@ -67,6 +93,14 @@ const posts = (await getCollection('blog')).sort(
 					}
 				</ul>
 			</section>
+            <section class="rss-section">
+                <a href="/rss.xml" class="rss-link">
+                    <svg class="rss-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"/>
+                    </svg>
+                    Subscribe via RSS
+                </a>
+            </section>
 		</main>
 		<Footer />
 	</body>
