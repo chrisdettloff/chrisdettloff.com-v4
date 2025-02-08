@@ -26,7 +26,9 @@ After doing more research on operating system such as the ones mentioned above, 
 | **Storage**      | [Western Digital Red Plus 12 TB 3.5" 7200 RPM Internal Hard Drive](https://pcpartpicker.com/product/CK2WGX/western-digital-wd-red-plus-12-tb-35-7200rpm-internal-hard-drive-wd120efbx)                                    |
 | **Case**         | [Jonsbo N3 Mini ITX Desktop Case](https://pcpartpicker.com/product/Rf26Mp/jonsbo-n3-mini-itx-desktop-case-n3)                                                                                                             |
 | **Power Supply** | [SeaSonic FOCUS SGX (2021) 650 W 80+ Gold Certified Fully Modular SFX Power Supply](https://pcpartpicker.com/product/PkZ9TW/seasonic-focus-sgx-2021-650-w-80-gold-certified-fully-modular-sfx-power-supply-focus-sgx-650) |
+
 My configuration is for the small form factor case of the Jonsbo N3. It have duel NVMe 1TB drives for my cache running in mirror and dual 12TB WD Reds, one running as the parity drive.
+
 ### To TrueNAS or to Unraid?
 
 Originally I was going to install TrueNAS. It being FOSS was a huge reason why. Unfortunately, I had issues installing and getting it running on my hardware. TrueNAS struggled with my motherboard's drivers, which caused it to be unsupported. Thus, I pivoted to Unraid.
