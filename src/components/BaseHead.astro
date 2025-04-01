@@ -7,11 +7,20 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	keywords?: string;
+	author?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteTitle = "Chris Dettloff - Cloud Engineer & Infrastructure Specialist";
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { 
+    title, 
+    description, 
+    image = '/blog-placeholder-1.jpg',
+    keywords = "cloud engineer, AWS, GCP, infrastructure as code, DevOps, Kubernetes, Terraform",
+    author = "Chris Dettloff"
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -28,9 +37,13 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
+<title>{title} | {siteTitle}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="English" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -38,6 +51,8 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:site_name" content={siteTitle} />
+<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -45,3 +60,36 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:creator" content="@cdettloff" />
+
+<!-- Additional Meta Tags -->
+<meta name="theme-color" content="#ffffff" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content={siteTitle} />
+<meta name="format-detection" content="telephone=no" />
+<meta name="mobile-web-app-capable" content="yes" />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chris Dettloff",
+    "url": Astro.url,
+    "image": new URL(image, Astro.url),
+    "sameAs": [
+        "https://www.linkedin.com/in/christopherdettloff",
+        "https://github.com/chrisdettloff"
+    ],
+    "jobTitle": "Cloud Engineer",
+    "description": description,
+    "knowsAbout": [
+        "AWS",
+        "GCP",
+        "Infrastructure as Code",
+        "DevOps",
+        "Kubernetes",
+        "Terraform",
+        "Cloud Architecture"
+    ]
+})} />
