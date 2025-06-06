@@ -23,6 +23,14 @@ const {
 } = Astro.props;
 ---
 
+<!-- Prevent theme flashing -->
+<script is:inline>
+  document.documentElement.setAttribute('data-theme', 
+    localStorage.getItem('theme') || 
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+  );
+</script>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
