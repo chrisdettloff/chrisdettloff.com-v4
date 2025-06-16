@@ -19,6 +19,6 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "tsx": "^4.19.4"
+    "tsx": "^4.20.3"
   }
 }
